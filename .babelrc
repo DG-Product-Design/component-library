@@ -4,6 +4,8 @@
 
 {
   "presets": [
+		["react-app", { "absoluteRuntime": false }],
+		["@babel/plugin-proposal-private-property-in-object", { "loose": true }],
     "@babel/preset-env",
     "@babel/preset-typescript"
   ]

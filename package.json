@@ -1,10 +1,11 @@
 {
-  "name": "@capcenter/component-library",
+  "name": "@j33p1n/component-library",
   "version": "0.1.0",
   "private": true,
   "main": "src/index.ts",
   "main:src": "src/index.ts",
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
@@ -23,7 +24,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "cross-env BABEL_ENV=production babel src -d dist",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006",
@@ -87,6 +88,9 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.19.3",
+    "@babel/preset-env": "^7.19.3",
     "@headlessui/react": "1.6.4",
     "@mdx-js/react": "^1.6.22",
     "@storybook/addon-a11y": "^6.5.3",
@@ -113,11 +117,30 @@
     "@types/react-lottie": "^1.2.6",
     "@types/react-syntax-highlighter": "^15.5.1",
     "@types/storybook__addon-info": "^5.2.4",
+    "auto": "^10.37.6",
     "babel-plugin-preval": "^5.1.0",
     "chromatic": "^6.5.4",
+    "cross-env": "^7.0.3",
     "react-lottie": "^1.2.3",
     "react-syntax-highlighter": "^15.5.0",
     "tailwindcss": "latest",
     "webpack": "^5.72.0"
-  }
+  },
+  "description": "The purpose of this component library is to: * Improve the developer experience by eliminating need to write CSS, with some exceptions * Increase developer momentum by growing the library over time * Maintain brand and style consistency across all digital products",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DG-Product-Design/component-library.git"
+  },
+  "keywords": [
+    "Tailwind",
+    "React",
+    "Typescript",
+    "Storybook"
+  ],
+  "author": "dav.a.george@gmail.com",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/DG-Product-Design/component-library/issues"
+  },
+  "homepage": "https://github.com/DG-Product-Design/component-library#readme"
 }
