@@ -1,0 +1,222 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import CodePreview from '../StorybookDocsComponents/CodePreview.jsx';
+
+
+<Meta title="Style Guide/Typography" />
+
+<div className="w-full max-w-screen-lg">
+	<Canvas withSource="none">
+		<h1 className="text-headline-xl">Headlines use the Proxima Nova font and Blue-500 for color.</h1>
+		<p className="text-body-default">Body text, buttons, and everything else use the Acumin Pro font with Slate-500 for color. See the styles below for proper use.</p>
+	</Canvas>
+</div>
+
+<br />
+<br />
+
+#### We use the following breakpoints across all our applications:
+- [XXS] : .text-headline-xxs
+- [XS] : .text-headline-xs
+- [SM] : .text-body-sm, .text-headline-sm
+- [SM + BOLD] : .text-body-sm-bold, .text-headline-sm-bold
+- [MD] : .text-body-md, .text-headline-md
+- [MD + BOLD] : .text-body-sm-bold, .text-headline-sm-bold
+- [LG] : .text-body-lg, .text-headline-lg
+- [LG + BOLD] : .text-body-lg-bold, .text-headline-lg-bold
+- [XL] : .text-headline-xl
+- [2XL] : .text-headline-2xl
+- [3XL] : .text-headline-3xl
+- [4XL] : .text-headline-4xl
+- [CAPTION] : .text-caption
+
+
+<br />
+
+# **Body Text**
+## Small  &nbsp; <code>.text-body-sm</code>
+<Canvas withSource="none">
+	<div className="w-full">
+		<p className="text-body-sm w-full mb-4">The quick brown fox jumps over the lazy dog.</p>
+		<CodePreview>
+			{`<p className="text-body-sm">The quick brown fox jumps over the lazy dog.</p>`}
+		</CodePreview>
+	</div>
+</Canvas>
+
+
+## Small/Bold  &nbsp; <code>.text-body-sm-bold</code>
+<Canvas withSource="none">
+	<div className="w-full">
+		<p className="text-body-sm-bold mb-4">The quick brown fox jumps over the lazy dog.</p>
+		<CodePreview>
+			{`<p className="text-body-sm-bold">The quick brown fox jumps over the lazy dog.</p>`}
+		</CodePreview>
+	</div>
+</Canvas>
+
+
+<br />
+
+## Default  &nbsp; <code>.text-body-default</code>
+<Canvas withSource="none">
+	<div className="w-full">
+		<p className="text-body-default mb-4">The quick brown fox jumps over the lazy dog.</p>
+		<CodePreview>
+			{`<p className="text-body-default">The quick brown fox jumps over the lazy dog.</p>`}
+		</CodePreview>
+	</div>
+</Canvas>
+
+
+> The above text style is active by default. This class is usually only needed to toggle between different text classes.
+
+<br />
+
+## Default/Bold  &nbsp; <code>.text-body-default-bold</code>
+<Canvas withSource="none">
+	<div className="w-full">
+		<p className="text-body-default-bold mb-4">The quick brown fox jumps over the lazy dog.</p>
+		<CodePreview>
+			{`<p className="text-body-default-bold">The quick brown fox jumps over the lazy dog.</p>`}
+		</CodePreview>
+	</div>
+</Canvas>
+
+
+<br />
+
+## Large  &nbsp; <code>.text-body-lg</code>
+<Canvas withSource="none">
+	<div className="w-full">
+		<p className="text-body-lg mb-4">The quick brown fox jumps over the lazy dog.</p>
+		<CodePreview>
+			{`<p className="text-body-lg">The quick brown fox jumps over the lazy dog.</p>`}
+		</CodePreview>
+	</div>
+</Canvas>
+
+
+## Large/Bold  &nbsp; <code>.text-body-lg-bold</code>
+<Canvas withSource="none">
+	<div className="w-full">
+		<p className="text-body-lg-bold mb-4">The quick brown fox jumps over the lazy dog.</p>
+		<CodePreview>
+			{`<p className="text-body-lg-bold">The quick brown fox jumps over the lazy dog.</p>`}
+		</CodePreview>
+	</div>
+</Canvas>
+
+
+<br />
+<br />
+
+# **Captions** &nbsp; <code>.text-caption</code>
+<Canvas withSource="none">
+	<div className="w-full">
+		<p className="text-caption mb-4 mr-4">The quick brown fox jumps over the lazy dog.</p>
+		<CodePreview>
+			{`<p className="text-caption">The quick brown fox jumps over the lazy dog.</p>`}
+		</CodePreview>
+	</div>
+</Canvas>
+
+
+
+
+<br />
+<br />
+
+# **Headlines**
+
+## XXS  &nbsp; <code>.text-headline-xxs</code>
+<Canvas withSource="none">
+	<div className="w-full">
+		<p className="text-headline-xxs mb-4">The quick brown fox jumps over the lazy dog.</p>
+		<CodePreview>
+			{`<p className="text-headline-xxs">The quick brown fox jumps over the lazy dog.</p>`}
+		</CodePreview>
+	</div>
+</Canvas>
+
+## XS  &nbsp; <code>.text-headline-xs</code>
+<Canvas withSource="none">
+	<div className="w-full">
+		<p className="text-headline-xs mb-4">The quick brown fox jumps over the lazy dog.</p>
+		<CodePreview>
+			{`<p className="text-headline-xs">The quick brown fox jumps over the lazy dog.</p>`}
+		</CodePreview>
+	</div>
+</Canvas>
+
+## Small  &nbsp; <code>.text-headline-sm</code>
+<Canvas withSource="none">
+	<div className="w-full">
+		<p className="text-headline-sm mb-4">The quick brown fox jumps over the lazy dog.</p>
+		<CodePreview>
+			{`<p className="text-headline-sm">The quick brown fox jumps over the lazy dog.</p>`}
+		</CodePreview>
+	</div>
+</Canvas>
+
+## Medium  &nbsp; <code>.text-headline-md</code>
+<Canvas withSource="none">
+	<div className="w-full">
+		<p className="text-headline-md mb-4">The quick brown fox jumps over the lazy dog.</p>
+		<CodePreview>
+			{`<p className="text-headline-md">The quick brown fox jumps over the lazy dog.</p>`}
+		</CodePreview>
+	</div>
+</Canvas>
+
+## Large  &nbsp; <code>.text-headline-lg</code>
+<Canvas withSource="none">
+	<div className="w-full">
+		<p className="text-headline-lg mb-4">The quick brown fox jumps over the lazy dog.</p>
+		<CodePreview>
+			{`<p className="text-headline-lg">The quick brown fox jumps over the lazy dog.</p>`}
+		</CodePreview>
+	</div>
+</Canvas>
+
+## XL  &nbsp; <code>.text-headline-xl</code>
+<Canvas withSource="none">
+	<div className="w-full">
+		<p className="text-headline-xl mb-4">The quick brown fox jumps over the lazy dog.</p>
+		<CodePreview>
+			{`<p className="text-headline-xl">The quick brown fox jumps over the lazy dog.</p>`}
+		</CodePreview>
+	</div>
+</Canvas>
+
+## 2XL  &nbsp; <code>.text-headline-2xl</code>
+<Canvas withSource="none">
+	<div className="w-full">
+		<p className="text-headline-2xl mb-4">The quick brown fox jumps over the lazy dog.</p>
+		<CodePreview>
+			{`<p className="text-headline-2xl">The quick brown fox jumps over the lazy dog.</p>`}
+		</CodePreview>
+	</div>
+</Canvas>
+
+## 3XL  &nbsp; <code>.text-headline-3xl</code>
+<Canvas withSource="none">
+	<div className="w-full">
+		<p className="text-headline-3xl mb-4">The quick brown fox jumps over the lazy dog.</p>
+		<CodePreview>
+			{`<p className="text-headline-3xl">The quick brown fox jumps over the lazy dog.</p>`}
+		</CodePreview>
+	</div>
+</Canvas>
+
+## 4XL  &nbsp; <code>.text-headline-4xl</code>
+<Canvas withSource="none">
+	<div className="w-full">
+		<p className="text-headline-4xl mb-4">The quick brown fox jumps over the lazy dog.</p>
+		<CodePreview>
+			{`<p className="text-headline-4xl">The quick brown fox jumps over the lazy dog.</p>`}
+		</CodePreview>
+	</div>
+</Canvas>
+
+
+

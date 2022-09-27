@@ -1,0 +1,143 @@
+import { Preview, Meta, Story, Canvas } from '@storybook/addon-docs';
+import CodePreview from '../../StorybookDocsComponents/CodePreview.jsx';
+import RenderPreview from '../../StorybookDocsComponents/RenderPreview.tsx';
+import ColorBlock from './ColorBlock.tsx';
+
+<Meta title="Style Guide/Colors" component={ColorBlock} />
+
+# Colors
+#### Here we have a pre-defined color palette, which is used across all of CapCenter's products, both digital (website, apps, etc.) and physical (ads, letterheads, etc.). Most of the time, we'll only be using our 'primary' (Orange 300) and 'secondary' (Green 400) colors, along with an occasional Blue and Slate color.
+
+<div className="relative pt-3 pb-4">
+	<div className="flex items-center w-full pb-2">
+		<div className="rounded-full bg-primary h-[32px] w-[32px] shadow-md border-2 border-white" />
+		<div className="leading-4 pl-4">Primary [Orange 300]</div>
+	</div>
+	<div className="flex items-center w-full">
+		<div className="rounded-full bg-secondary h-[32px] w-[32px] shadow-md border-2 border-white" />
+		<div className="leading-4 pl-4">Secondary [Green 400]</div>
+	</div>
+</div>
+
+> In order to meet the AA-level (WCAG 2.0) contrast ratio for colors on the web, digital products use a *slightly* different 'primary orange' variant than the rest of the business.
+
+<br />
+
+## How to use
+#### The two main ways to apply color to an element are the <code>background-color</code> and <code>text-color</code> CSS attributes. Thankfully, Tailwind gives us an easy way to manipulate these attributes via CSS classes.
+
+- **Text color:** use the `text-{color}` classes, e.g. `.text-primary` or `.text-blue-500`
+- **Background color:** use the `bg-{color}` classes, e.g. `.bg-secondary` or `.bg-green-200`
+
+<br />
+
+## **Theme Colors**
+
+<div className="grid grid-cols-4 gap-0">
+	<div>
+		<ColorBlock className="bg-orange-50" hex="FFF5ED" />
+		<ColorBlock className="bg-orange-100" hex="FFE5D1" />
+		<ColorBlock invisible className="bg-orange-200" hex="-" />
+		<ColorBlock className="bg-orange-300" hex="EA701B" secondaryText="Primary" textLight />
+		<ColorBlock className="bg-orange-400" hex="B44100" textLight />
+		<ColorBlock className="bg-orange-500" hex="661800" textLight />
+	</div>
+	<div>
+		<ColorBlock className="bg-green-50" hex="EDFFF8" />
+		<ColorBlock className="bg-green-100" hex="CEFFED" />
+		<ColorBlock className="bg-green-200" hex="2AE9BB" />
+		<ColorBlock className="bg-green-300" hex="007E6F" textLight />
+		<ColorBlock className="bg-green-400" hex="00524D" secondaryText="Secondary" textLight />
+		<ColorBlock className="bg-green-500" hex="003936" textLight />
+	</div>
+	<div>
+		<ColorBlock className="bg-blue-50" hex="E5F4FF" />
+		<ColorBlock className="bg-blue-100" hex="C6E4FA" />
+		<ColorBlock className="bg-blue-200" hex="0C7BE1" textLight />
+		<ColorBlock className="bg-blue-300" hex="0D59B2" textLight />
+		<ColorBlock className="bg-blue-400" hex="0D3F7A" textLight />
+		<ColorBlock className="bg-blue-500" hex="0C2C48" textLight />
+	</div>
+	<div>
+		<ColorBlock className="bg-slate-50" hex="F6F6F6" />
+		<ColorBlock className="bg-slate-100" hex="EBF1F2" />
+		<ColorBlock className="bg-slate-200" hex="BCCACB" />
+		<ColorBlock className="bg-slate-300" hex="849697" textLight />
+		<ColorBlock className="bg-slate-400" hex="647778" textLight />
+		<ColorBlock className="bg-slate-500" hex="435759" textLight />
+		<ColorBlock className="bg-slate-600" hex="213035" textLight />
+	</div>
+</div>
+
+<br />
+<br />
+
+## **System Colors**
+
+<div className="grid grid-cols-4">
+	<div>
+		<ColorBlock className="bg-caution-100" hex="FFF5DF" />
+		<ColorBlock className="bg-caution-200" hex="FFCC65" />
+		<ColorBlock className="bg-caution-300" hex="FFAB00" />
+	</div>
+	<div>
+		<ColorBlock className="bg-red-100" hex="FFE7E9" />
+		<ColorBlock className="bg-red-200" hex="BD2130" textLight />
+		<ColorBlock className="bg-red-300" hex="980412" textLight />
+	</div>
+</div>
+
+<br />
+<br />
+
+
+## **Background Gradients**
+
+<div className="grid grid-cols-4 gap-4">
+	<div className="border border-primary shadow rounded-lg bg-linear-orange-light h-[200px] w-full flex items-center justify-center">
+		<div className="font-semibold">.bg-linear-orange-light</div>
+	</div>
+	<div className="border border-secondary shadow rounded-lg bg-linear-green-light h-[200px] w-full flex items-center justify-center">
+		<div className="font-semibold">.bg-linear-green-light</div>
+	</div>
+	<div className="border border-primary shadow rounded-lg bg-linear-orange-dark h-[200px] w-full flex items-center justify-center">
+		<div className="font-semibold text-white">.bg-linear-orange-dark</div>
+	</div>
+	<div className="border border-secondary shadow rounded-lg bg-linear-green-dark h-[200px] w-full flex items-center justify-center">
+		<div className="font-semibold text-white">.bg-linear-green-dark</div>
+	</div>
+</div>
+
+<br />
+<br />
+
+## **Arbitrary Colors**
+
+#### **Need to use an arbitrary, one-off color that doesn't exist in our color library?** No problem! Simply use square brackets to generate a class for that color on-demand, e.g. <code>bg-[#9233ff]</code>. This also works for nearly all utility classes. For example, in the code below, we are writing class names using arbitrary values for <code>background-color</code>, <code>height</code>, and <code>width</code> to create a purple circle with specific dimensions:
+
+<div className="w-full text-right underline">
+	<a className="underline" href="https://tailwindcss.com/docs/adding-custom-styles#using-arbitrary-values" target="_blank">Learn more about using arbitrary values</a>
+</div>
+
+<br />
+
+
+<div className="max-w-fit flex-wrap flex-col" style={{margin: '0 auto'}}>
+	<RenderPreview className="mb-2">
+		<div className="bg-[#9233ff] h-[42px] w-[42px] rounded-full justify-center shadow-lg" />
+	</RenderPreview>
+	<CodePreview>
+		{`<div className="bg-[#9233ff] h-[42px] w-[42px] rounded-full shadow-lg" />`}
+	</CodePreview>
+</div>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,62 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="Getting Started" />
+
+# Getting Started
+
+1. Starting a new project
+1. Intellisense for Tailwind
+1. Style Generation
+1. Helpful tips
+
+<br />
+
+## Creating new apps (sample for working within Yarn Workspaces)
+1. Copy the directory `/Workspaces/AppTemplate` to the same location and rename your newly-copied directory.
+<br />
+<br />
+1. In `Workspaces/package.json` add your new app's directory path to the 'packages' object
+<br />
+<br />
+1. In your **new app's** `package.json` file, replace the name 'app-template-v2' with your new project's name. Note: best practive is to use 'kebab-case' when naming your app, e.g. 'my-new-app-name'
+<br />
+<br />
+1. To test your success:
+- Navigate to `/Workspaces` in your console and run `yarn` 
+- Once that completes, run another command: `yarn workspace [app-name-from-package.json] start`. If this command succeeds, then you are ready to rock!
+<br />
+<br />
+
+## Intellisense for Tailwind
+- Install the [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) extension in VSCode
+- You should now have code comlpetion for Tailwind classes
+<br />
+<br />
+
+## Style Generation
+
+One of the many advantages that Tailwind provides is the ability to keep your CSS classes at a complete minimum. When we give an element a class name, the Tailwind CLI automaticaly generates the class styles and adds them to our `output.css` file at run-time. This ensures that the only CSS in our application is CSS that is actually used. 
+
+1. When you are ready to start developing, you'll need Tailwind to process the class names you write. This is very easy using the commandline. Simply open a new shell instance and navigate to your project's **root directory**, e.g. `~user/Workspaces/projectName/`. 
+<br />
+<br />
+1. Once there, run the following command: `npx tailwindcss -i ./src/index.css -o ./src/output.css --watch`
+
+- This command tells the Tailwind CLI to take everything specified inside the "content: []" object in tailwind.config.js index.css file, generate styles at run-time based on the class names present in the app, and output the result to **src/output.css**
+
+> **Note:** This is the same script used to create the `library-styles.css` file that we imported from `Workspaces/@componentLibrary`
+
+> **Note:** If this command fials to run, double-check that the directory paths in the `npx tailwindcss ...` command match the project's paths for `index.css` and `output.css`
+
+<br />
+
+## Informing Tailwind which files to process
+- In the `tailwind.config.js` file, make sure that any content you want processed with Tailwind is included in the `content : []` array. Usually the default values are fine to process the app to start, but as the application gets more complex, consider being more specific to save your local machine's resources from processing non-UI files.
+
+<br />
+<br />
+
+# Helpful Tips
+
+### Style conflicts
+- Make sure that the output.css import is listed **after** any other CSS imports in the project's `index.tsx` file. This ensures the project's local class names have higher specificity than any imported class names.

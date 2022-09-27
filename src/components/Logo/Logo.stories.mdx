@@ -1,0 +1,113 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/addon-docs';
+import RenderPreview from '../../StorybookDocsComponents/RenderPreview.tsx';
+import CodePreview from '../../StorybookDocsComponents/CodePreview.jsx';
+import {Logo as BrandLogo} from './Logo.tsx';
+
+<Meta
+	title="Style Guide/Logos" 
+	component={Logo}
+	argTypes={{
+		iconOnly: {
+			name: 'iconOnly',
+			description: 'Controls if logo is icon-style or lockup-style.',
+			control: 'boolean',
+		},
+		white: {
+			name: 'white',
+			description: 'Controls if color is default or all-white.',
+			control: 'boolean',
+		},
+		className: {
+			name: 'className',
+			description: 'Optional prop for adding a class to the icon\'s top-level <svg> tag.',
+			control: 'text',
+		}
+	}}
+/>
+
+export const Logo = (args) => <BrandLogo {...args} />
+
+# Logos
+
+<div className="grid grid-cols-1 md:grid-cols-8 w-full justify-between gap-6">
+	<h3 className="col-span-1 md:col-span-5">There are 2 main types of logo styles: icon and lockup.</h3>
+	<pre className="sbdocs-import-statement col-span-1 md:col-span-3 h-fit">
+		<code>import Logo from ''</code>
+	</pre>
+</div>
+
+<br />
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8" >
+	<div>
+		<h3 className="text-center font-semibold pb-4">Default</h3>
+		<RenderPreview className="mb-2">
+			<div className="flex flex-wrap justify-center h-[42px]">
+				<BrandLogo />
+			</div>
+		</RenderPreview>
+		<CodePreview>
+			{'<Logo />'}
+		</CodePreview>
+	</div>
+	<div>
+		<h3 className="text-center font-semibold pb-4">Icon Only</h3>
+		<RenderPreview className="mb-2">
+			<div className="flex flex-wrap justify-center h-[42px]">
+				<BrandLogo iconOnly />
+			</div>
+		</RenderPreview>
+		<CodePreview>
+			{'<Logo iconOnly />'}
+		</CodePreview>
+	</div>
+	<div>
+		<RenderPreview dark className="mb-2">
+			<div className="flex flex-wrap justify-center h-[42px]">
+				<BrandLogo white />
+			</div>
+		</RenderPreview>
+		<CodePreview>
+			{'<Logo white />'}
+		</CodePreview>
+	</div>
+	<div>
+		<RenderPreview dark className="mb-2">
+			<div className="flex flex-wrap justify-center h-[42px] text-white">
+				<BrandLogo iconOnly white />
+			</div>
+		</RenderPreview>
+		<CodePreview>
+			{'<Logo white iconOnly />'}
+		</CodePreview>
+	</div>
+</div>
+
+<br />
+<br />
+<br />
+
+## Try it out
+
+> HINT: Click the 'Canvas' button at the top-left of the screen to test out the different props. You can then return to the code block below to see the code dynamically generated from your props.
+
+> HINT #2: When the 'Canvas' tab is active, you can toggle between light/dark background colors by clicking the icon next to the Docs tab that looks like a placeholder photo.
+
+<Canvas isExpanded>
+	<Story
+		name="Logos"
+		args={{
+			white: false,
+			iconOnly: false,
+		}}
+		parameters={{
+			backgrounds: {
+				default: 'dark',
+			}
+		}}
+	>
+		{Logo.bind({})}
+	</Story>
+</Canvas>
+
+<ArgsTable of={BrandLogo} />

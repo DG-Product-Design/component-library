@@ -1,0 +1,10 @@
+/**
+ * This file enables Storybook's typescript configuration
+ */
+
+{
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-typescript"
+  ]
+}

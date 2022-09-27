@@ -1,0 +1,185 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/addon-docs';
+import RenderPreview from '../../StorybookDocsComponents/RenderPreview.tsx';
+import CodePreview from '../../StorybookDocsComponents/CodePreview.jsx';
+import Icon, { iconPaths } from './Icon.tsx';
+
+<Meta
+	title='Icons/Icons'
+	component={Icon}
+	argTypes={{
+		height: {
+			name: 'height',
+			control: { type: 'text' },
+		},
+		width: {
+			name: 'width',
+			control: { type: 'text' },
+		},
+		iconName: {
+			name: 'iconName',
+			control: 'select',
+		},
+	}}
+/>
+
+# Icons
+
+<div className="grid grid-cols-1 md:grid-cols-8 w-full justify-between gap-6">
+	<h3 className="col-span-1 md:col-span-5">We have a few pre-defined icons available for use in CapCenter applications. Most of the time, these icons are strictly relegated to buttons as an indicator of interactivity. <a href="" className="underline">See Icon Button</a></h3>
+	<pre className="sbdocs-import-statement col-span-1 md:col-span-3 h-fit">
+		<code>import Icon from ''</code>
+	</pre>
+</div>
+
+<br />
+
+## Available Icons
+| iconName					| Render																|
+| ------------------| --------------------------------------|
+| check    					| <Icon iconName='check' /> 						|
+| chevronDown 			| <Icon iconName='chevronDown' /> 			|
+| chevronLeft 			| <Icon iconName='chevronLeft' /> 			|
+| chevronRight			| <Icon iconName='chevronRight' /> 			|
+| chevronRightBold	| <Icon iconName='chevronRightBold' /> 	|
+| refresh    				| <Icon iconName='refresh' /> 					|
+| settings    			| <Icon iconName='settings' /> 					|
+| arrowDown    			| <Icon iconName='arrowDown' /> 				|
+| arrowDownBold  		| <Icon iconName='arrowDownBold' /> 		|
+| arrowRight    		| <Icon iconName='arrowRight' /> 				|
+| arrowRightSmall  	| <Icon iconName='arrowRightSmall' /> 	|
+| arrowRightBold  	| <Icon iconName='arrowRightBold' /> 	  |
+| search  					| <Icon iconName='search' /> 	  				|
+| searchBold 				| <Icon iconName='searchBold' /> 	  		|
+| info  						| <Icon iconName='info' /> 	  					|
+| infoSolid 				| <Icon iconName='infoSolid' /> 	  		|
+
+<br />
+
+## Basic Examples
+
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-8" >
+	<div>
+		<RenderPreview className="mb-2">
+			<div className="flex flex-wrap justify-center">
+				<Icon iconName='check' />
+			</div>
+		</RenderPreview>
+		<CodePreview>
+			{'<Icon iconName="check" />'}
+		</CodePreview>
+	</div>
+	<div>
+		<RenderPreview className="mb-2">
+			<div className="flex flex-wrap justify-center">
+				<Icon iconName='settings' />
+			</div>
+		</RenderPreview>
+		<CodePreview>
+			{'<Icon iconName="settings" />'}
+		</CodePreview>
+	</div>
+	<div>
+		<RenderPreview className="mb-2">
+			<div className="flex flex-wrap justify-center">
+				<Icon iconName='chevronLeft' />
+			</div>
+		</RenderPreview>
+		<CodePreview>
+			{'<Icon iconName="chevronLeft" />'}
+		</CodePreview>
+	</div>
+	<div>
+		<RenderPreview className="mb-2">
+			<div className="flex flex-wrap justify-center">
+				<Icon iconName='chevronRight' />
+			</div>
+		</RenderPreview>
+		<CodePreview>
+			{'<Icon iconName="chevronRight" />'}
+		</CodePreview>
+	</div>
+</div>
+
+<br />
+
+## Resizing Icons
+
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-8" >
+	<div>
+		<RenderPreview className="w-full relative mb-2">
+			<div className="flex flex-wrap justify-center h-[42px]">
+				<Icon iconName="check" height="2.75rem" width="2.75rem" />
+			</div>
+		</RenderPreview>
+		<CodePreview>
+			{'<Icon iconName="check" height="2.75rem" width="2.75rem" />'}
+		</CodePreview>
+	</div>
+	<div>
+		<RenderPreview overflow="overflow-visible" className="mb-2">
+			<div className="flex flex-wrap justify-center h-[42px] items-center">
+				<Icon iconName="settings" height="3.25rem" width="3.25rem" className="hover:w-10 hover:h-10" />
+				<small className="absolute m-auto text-sm w-[170px] right-full border border-slate bg-slate-50 rounded leading-4 p-2">
+					*Using the 'hover:' class will override height and width props
+				</small>
+			</div>
+		</RenderPreview>
+		<CodePreview>
+			{'<Icon iconName="settings" height="3.25rem" width="3.25rem" className="hover:w-10 hover:h-10" />'}
+		</CodePreview>
+	</div>
+</div>
+
+<br />
+
+## Coloring Icons
+
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-8" >
+	<div>
+		<RenderPreview dark className="mb-2">
+			<div className="flex flex-wrap justify-center">
+				<Icon iconName="check" className="text-caution-200" height="2rem" width="2rem"/>
+			</div>
+		</RenderPreview>
+		<CodePreview>
+			{'<Icon iconName="check" className="text-caution-200" />'}
+		</CodePreview>
+	</div>
+	<div>
+		<RenderPreview dark className="mb-2">
+			<div className="flex flex-wrap justify-center">
+				<Icon iconName="check" className="text-white hover:text-green-200 ease-in-out transition-colors" height="2rem" width="2rem"/>
+			</div>
+		</RenderPreview>
+		<CodePreview>
+			{'<Icon iconName="check" className="text-white hover:text-green-200 ease-in-out transition-colors" />'}
+		</CodePreview>
+	</div>
+</div>
+
+<br />
+
+## Rotating Icons
+
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-8" >
+	<div>
+		<RenderPreview className="mb-2">
+			<div className="flex flex-wrap justify-center">
+				<Icon iconName="settings" width="2rem" className="hover:rotate-180" />
+			</div>
+		</RenderPreview>
+		<CodePreview>
+			{'<Icon iconName="settings" className="hover:rotate-180" />'}
+		</CodePreview>
+	</div>
+	<div>
+		<RenderPreview className="mb-2">
+			<div className="flex flex-wrap justify-center">
+				<Icon iconName="chevronLeft" width="2rem" className="hover:rotate-180 ease-in-out transition-transform" />
+			</div>
+		</RenderPreview>
+		<CodePreview>
+			{'<Icon iconName="chevronLeft" className="hover:rotate-180 ease-in-out transition-transform" />'}
+		</CodePreview>
+	</div>
+</div>

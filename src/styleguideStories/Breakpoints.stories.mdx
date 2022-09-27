@@ -1,0 +1,97 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import RenderPreview from '../StorybookDocsComponents/RenderPreview.tsx';
+import CodePreview from '../StorybookDocsComponents/CodePreview.jsx';
+
+<Meta title="Style Guide/Breakpoints" />
+
+# Breakpoints
+
+#### We use the following breakpoints across all our applications:
+- [XS] Extra Small: 360px
+- [SM] Small: 640px
+- [MD] Medium: 768px
+- [LG] Large: 1024px
+- [XL] Extra Large: 1280px
+- [2XL] Extra Extra Large: 1440px
+
+<br />
+
+## Try it out
+#### Expand your screen width or horizontally scroll to see the different breakpoints below. In order to illustrate the breakpoint sizes, we're using the <code>.max-w-screen-{size}</code> class to limit each element's max-width. 
+
+<br />
+
+<div className="grid columns-1">
+	<div className="w-fit pb-8">
+		<RenderPreview className="mb-2">
+			<div className="w-screen max-w-screen-xs">
+				<div className="w-full font-bold text-center rounded-md shadow-lg border border-white bg-slate-100 p-6">
+					XS: 360px
+				</div>
+			</div>
+		</RenderPreview>
+		<CodePreview>
+			{'<div className="max-w-screen-xs" />'}
+		</CodePreview>
+	</div>
+	<div className="w-fit pb-8">
+		<RenderPreview className="mb-2">
+			<div className="w-screen max-w-screen-sm">
+				<div className="w-full font-bold text-center rounded-md shadow-lg border border-white bg-slate-100 p-6">
+					SM: 640px
+				</div>
+			</div>
+		</RenderPreview>
+		<CodePreview>
+			{'<div className="max-w-screen-sm" />'}
+		</CodePreview>
+	</div>
+	<div className="w-fit pb-8">
+		<RenderPreview className="mb-2">
+			<div className="w-screen max-w-screen-md">
+				<div className="w-full font-bold text-center rounded-md shadow-lg border border-white bg-slate-100 p-6">
+					MD: 768px
+				</div>
+			</div>
+		</RenderPreview>
+		<CodePreview>
+			{'<div className="max-w-screen-md" />'}
+		</CodePreview>
+	</div>
+	<div className="w-fit pb-8">
+		<RenderPreview className="mb-2">
+			<div className="w-screen max-w-screen-lg">
+				<div className="w-full font-bold text-center rounded-md shadow-lg border border-white bg-slate-100 p-6">
+					LG: 1024px
+				</div>
+			</div>
+		</RenderPreview>
+		<CodePreview>
+			{'<div className="max-w-screen-lg" />'}
+		</CodePreview>
+	</div>
+	<div className="w-fit pb-8">
+		<RenderPreview className="mb-2">
+			<div className="w-screen max-w-screen-xl">
+				<div className="w-full font-bold text-center rounded-md shadow-lg border border-white bg-slate-100 p-6">
+					XL: 1280px
+				</div>
+			</div>
+		</RenderPreview>
+		<CodePreview>
+			{'<div className="max-w-screen-xl" />'}
+		</CodePreview>
+	</div>
+	<div className="w-fit pb-8">
+		<RenderPreview className="mb-2">
+			<div className="w-screen max-w-screen-2xl">
+				<div className="w-full font-bold text-center rounded-md shadow-lg border border-white bg-slate-100 p-6">
+					2XL: 1440px
+				</div>
+			</div>
+		</RenderPreview>
+		<CodePreview>
+			{'<div className="max-w-screen-2xl" />'}
+		</CodePreview>
+	</div>
+</div>

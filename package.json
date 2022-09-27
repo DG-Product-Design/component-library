@@ -1,0 +1,123 @@
+{
+  "name": "@capcenter/component-library",
+  "version": "0.1.0",
+  "private": true,
+  "main": "src/index.ts",
+  "main:src": "src/index.ts",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.1.1",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.4.1",
+    "@types/node": "^16.11.27",
+    "babel-plugin-macros": "^3.1.0",
+    "classnames": "^2.3.1",
+    "react-scripts": "^5.0.1",
+    "sass": "^1.50.0",
+    "typescript": "^4.6.3",
+    "web-vitals": "^2.1.4"
+  },
+  "peerDependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "storybook-docs": "start-storybook --docs --no-manager-cache",
+    "chromatic": "npx chromatic --project-token=f9617f7726c1"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es2021": true,
+      "es6": true,
+      "node": true
+    },
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off",
+          "indent": [
+            "warn",
+            "tab",
+            {
+              "SwitchCase": 1
+            }
+          ],
+          "linebreak-style": [
+            "warn",
+            "unix"
+          ],
+          "quotes": [
+            "warn",
+            "single"
+          ],
+          "semi": [
+            "warn",
+            "always"
+          ],
+          "react/display-name": "off",
+          "@typescript-eslint/explicit-function-return-type": "off"
+        }
+      }
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@headlessui/react": "1.6.4",
+    "@mdx-js/react": "^1.6.22",
+    "@storybook/addon-a11y": "^6.5.3",
+    "@storybook/addon-actions": "^6.5.3",
+    "@storybook/addon-controls": "^6.5.3",
+    "@storybook/addon-docs": "^6.5.3",
+    "@storybook/addon-essentials": "^6.5.3",
+    "@storybook/addon-info": "^5.3.21",
+    "@storybook/addon-interactions": "^6.5.3",
+    "@storybook/addon-links": "^6.5.3",
+    "@storybook/addon-storysource": "^6.5.3",
+    "@storybook/addon-viewport": "^6.5.3",
+    "@storybook/builder-webpack5": "^6.5.3",
+    "@storybook/manager-webpack5": "^6.5.3",
+    "@storybook/node-logger": "^6.5.3",
+    "@storybook/preset-create-react-app": "^4.1.0",
+    "@storybook/react": "^6.5.3",
+    "@storybook/testing-library": "^0.0.11",
+    "@storybook/theming": "^6.5.3",
+    "@tailwindcss/forms": "^0.5.2",
+    "@tailwindcss/typography": "^0.5.2",
+    "@types/react": "^18.0.2",
+    "@types/react-dom": "^18.0.5",
+    "@types/react-lottie": "^1.2.6",
+    "@types/react-syntax-highlighter": "^15.5.1",
+    "@types/storybook__addon-info": "^5.2.4",
+    "babel-plugin-preval": "^5.1.0",
+    "chromatic": "^6.5.4",
+    "react-lottie": "^1.2.3",
+    "react-syntax-highlighter": "^15.5.0",
+    "tailwindcss": "latest",
+    "webpack": "^5.72.0"
+  }
+}

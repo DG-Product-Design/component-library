@@ -1,0 +1,31 @@
+import { Meta } from '@storybook/addon-docs';
+import WelcomeLottie from '../StorybookDocsComponents/WelcomeLottieAnimation/WelcomeLottie.jsx'
+import WelcomeImage from '../StorybookDocsComponents/img/welcome-image.svg';
+export const Bubbles = require('../StorybookDocsComponents/img/bubbles.gif');
+
+<Meta title="Welcome" />
+
+<div className="flex items-baseline">
+	<h1>&#128075; &nbsp; Welcome!</h1>
+	&nbsp; &nbsp;
+	<h4 className="text-slate-400 pl-2">v1.0.0</h4>
+</div>
+
+<div className="container w-full flex pb-8">
+	{/* <div className="w-1/2 max-w-screen-md inline-flex">
+		<img src={Bubbles} className="rounded-full shadow aspect-square" />
+	</div> */}
+	<div className="w-full max-w-screen-md flex flex-row items-start justify-start pr-[260px]">
+		<img src={WelcomeImage} className="rounded-2xl" />
+		<WelcomeLottie />
+	</div>
+</div>
+
+### Tech Overview
+- Components are written in React
+- The [TailwindCSS](https://tailwindcss.com/) CLI is used to hold theme variables and process class names on the fly at build-time. More on that in [Getting Started](./?path=/docs/getting-started--page).
+- [Storybook](https://storybook.js.org/) is used for documentation, testing, and visual display of components. For example, the documentation you are reading right now is a Storybook "story." It's written in MDX using Component Story Format (CSF) -- an ES6 modules-based standard for writing component examples.
+
+### Component Library Team
+- **Tech/UI**: David George &nbsp; `dav.a.george@gmail.com`
+
