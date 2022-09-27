@@ -19,7 +19,6 @@ const LogoLockup = (props: { white?: boolean, className?: string }) => {
 			<path fill={props.white ? colors.white : colors.orange['300']} fillRule="evenodd" clipRule="evenodd" d="M13.564 17.82H11.153V14.981L21.825 8.716V0L6 9.086V32.984H21.825V27.068H13.564V17.82Z" />
 			<path fill={props.white ? colors.white : colors.orange['300']} fillRule="evenodd" clipRule="evenodd" d="M25.104 0V8.716L35.775 14.981V17.82H33.362V27.068H25.104V32.984H40.926V9.086L25.104 0Z" />
 		</svg>
-
 	)
 }
 
