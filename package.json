@@ -1,7 +1,7 @@
 {
   "name": "@j33p1n/component-library",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "main": "src/index.ts",
   "main:src": "src/index.ts",
   "dependencies": {
