@@ -77,10 +77,10 @@
     ]
   },
   "browserslist": [
-		">0.2%",
-		"not dead",
-		"not op_mini all"
-	],
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ],
   "devDependencies": {
     "@babel/cli": "^7.19.3",
     "@babel/core": "^7.19.3",
