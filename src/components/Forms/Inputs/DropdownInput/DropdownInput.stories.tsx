@@ -1,6 +1,6 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
-import DropdownComponent from '../DropdownInput/DropdownInput';
+import DropdownComponent from './DropdownInput';
 
 export default {
 	component: DropdownComponent,
