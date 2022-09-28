@@ -22,7 +22,7 @@
     "declarationDir": "types",
     "emitDeclarationOnly": true,
 		"resolveJsonModule": true,
-		"isolatedModules": true,
+		"isolatedModules": false,
   },
 	"include": [
 		"src"

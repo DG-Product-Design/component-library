@@ -7,4 +7,6 @@ The purpose of this component library is to:
 ## RUNNING THE APP
 This app does not run like most React apps. Instead, this application exports its components and displays documentation via Storybook.
 
-To view the documentation, navigate to the app's root directory (ex: `~username/repos/componentLibrary/`) and run `npm run storybook`
+To view the documentation, navigate to the app's root directory (ex: `~username/repos/componentLibrary/`) and run:
+- `npx storybook init`
+- Then: `npm run storybook`
