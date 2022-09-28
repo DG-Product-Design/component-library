@@ -5,6 +5,8 @@
   "main": "src/index.ts",
   "main:src": "src/index.ts",
   "dependencies": {
+    "@tailwindcss/forms": "^0.5.2",
+    "@tailwindcss/typography": "^0.5.2",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
@@ -104,8 +106,6 @@
     "@storybook/react": "^6.5.3",
     "@storybook/testing-library": "^0.0.11",
     "@storybook/theming": "^6.5.3",
-    "@tailwindcss/forms": "^0.5.2",
-    "@tailwindcss/typography": "^0.5.2",
     "@types/react": "^18.0.2",
     "@types/react-dom": "^18.0.5",
     "@types/react-lottie": "^1.2.6",
