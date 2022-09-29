@@ -25,7 +25,7 @@ const InputTypeAttributes = [
 	'time',
 	'url',
 	'week',
-]
+];
 
 export default {
 	component: TextComponent,
@@ -88,4 +88,4 @@ TextInput.args = {
 	enforcePattern: true,
 	pattern: '[-]?[0-9]*[.,]?[0-9]+',
 	errorMessage: 'User input does not match pattern',
-}
+};

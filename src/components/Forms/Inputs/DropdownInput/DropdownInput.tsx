@@ -1,5 +1,5 @@
-import React from 'react'
-import { Listbox, Transition } from '@headlessui/react'
+import React from 'react';
+import { Listbox, Transition } from '@headlessui/react';
 import Icon from '../../../Icons/Icon';
 import classNames from 'classnames';
 
@@ -18,7 +18,7 @@ interface DropdownInputProps {
 const DropdownInput = (props: DropdownInputProps) => {
 	const [selected, setSelected] = React.useState(props.multiple ? [] : undefined);
 
-	function customOnChangeFunction(func: any) { return func };
+	function customOnChangeFunction(func: any) { return func; }
 
 	return (
 		<div className="">
@@ -78,7 +78,7 @@ const DropdownInput = (props: DropdownInputProps) => {
 				</div>
 			</Listbox>
 		</div>
-  )
-}
+	);
+};
 
 export default DropdownInput;

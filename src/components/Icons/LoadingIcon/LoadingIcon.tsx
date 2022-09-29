@@ -1,7 +1,7 @@
-import React from 'react'
-import classNames from 'classnames'
-import Lottie from 'react-lottie'
-import LoadingAnimation from './LoadingAnimation.json'
+import React from 'react';
+import classNames from 'classnames';
+import Lottie from 'react-lottie';
+import LoadingAnimation from './LoadingAnimation.json';
 
 const LoadingIcon = (props: {
 	iconColor?: string;
@@ -20,13 +20,13 @@ const LoadingIcon = (props: {
 	const LoadingAnimationDeepCopy = JSON.parse(LoadingAnimationStringified);
 
 	if (props.iconColor === 'white') {
-		LoadingAnimationDeepCopy.layers[1].shapes[0].it[3].c.k = whiteIconColor
+		LoadingAnimationDeepCopy.layers[1].shapes[0].it[3].c.k = whiteIconColor;
 	} else if (props.iconColor === 'green') {
-		LoadingAnimationDeepCopy.layers[1].shapes[0].it[3].c.k = greenIconColor
+		LoadingAnimationDeepCopy.layers[1].shapes[0].it[3].c.k = greenIconColor;
 	} else if (!props.iconColor || props.iconColor === 'orange') {
-		LoadingAnimationDeepCopy.layers[1].shapes[0].it[3].c.k = orangeIconColor
-	};
-
+		LoadingAnimationDeepCopy.layers[1].shapes[0].it[3].c.k = orangeIconColor;
+	}
+	
 	const lottieOptions = {
 		loop: true,
 		autoplay: true,
@@ -34,7 +34,7 @@ const LoadingIcon = (props: {
 		rendererSettings: {
 			preserveAspectRatio: 'xMidYMid slice'
 		}
-	}
+	};
 
 	return ( 
 		<div className={classNames(props.className && props.className)}>
@@ -44,7 +44,7 @@ const LoadingIcon = (props: {
 				width={props.width ? props.width : 50}
 			/>
 		</div>
-	)
-}
+	);
+};
 
-export default LoadingIcon
+export default LoadingIcon;

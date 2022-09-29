@@ -33,14 +33,14 @@ const Icon = (props: IconProps) => {
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className={classNames(props.className && props.className)} height={props.height ? props.height : (props.width && !props.height) ? 'auto' : '1.25rem'}>
 				<path fillRule="evenodd" d={iconPaths[props.iconName]} clipRule="evenodd" />
 			</svg>
-		)
+		);
 	}
 	if (props.iconName === 'arrowRight' || props.iconName === 'search' || props.iconName === 'info') {
 		return (
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className={classNames(props.className && props.className)} height={props.height ? props.height : (props.width && !props.height) ? 'auto' : '1.25rem'}>
 				<path strokeLinecap="round" strokeLinejoin="round" d={iconPaths[props.iconName]} />
 			</svg>
-		)
+		);
 	}
 	
 	if (props.iconName === 'infoSolid') {
@@ -48,15 +48,15 @@ const Icon = (props: IconProps) => {
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className={classNames(props.className && props.className)} height={props.height ? props.height : (props.width && !props.height) ? 'auto' : '1.25rem'}>
 				<path fillRule="evenodd" d={iconPaths[props.iconName]} clipRule="evenodd" />
 			</svg>
-		)
+		);
 	}
 
 	if (props.iconName === 'arrowRightBold') {
 		return (
 			<svg viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg" className={classNames(props.className && props.className)} height={props.height ? props.height : (props.width && !props.height) ? 'auto' : '1.25rem'}>
 				<path d={iconPaths[props.iconName]} fill="currentColor"/>
-				</svg>
-		)
+			</svg>
+		);
 	}
 	
 	if (props.iconName === 'arrowRightSmall') {
@@ -64,15 +64,15 @@ const Icon = (props: IconProps) => {
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className={classNames(props.className && props.className)} height={props.height ? props.height : (props.width && !props.height) ? 'auto' : '1.25rem'}>
 				<path fillRule="evenodd" d={iconPaths[props.iconName]} clipRule="evenodd" />
 			</svg>
-		)
+		);
 	}
 	
 	if (props.iconName === 'arrowDown') {
 		return (
 			<svg xmlns="http://www.w3.org/2000/svg" className={classNames(props.className && props.className)} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" width={props.width ? props.width : (props.height && !props.width) ? 'auto' : '1.25rem'}>
-				<path stroke-linecap="round" strokeLinejoin="round" d={iconPaths[props.iconName]} />
+				<path strokeLinecap="round" strokeLinejoin="round" d={iconPaths[props.iconName]} />
 			</svg>
-		)
+		);
 	}
 
 
