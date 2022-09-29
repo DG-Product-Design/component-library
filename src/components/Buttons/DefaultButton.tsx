@@ -5,6 +5,7 @@ import Icon from '../Icons/Icon';
 import LoadingIcon from '../Icons/LoadingIcon/LoadingIcon';
 
 
+// eslint-disable-next-line react/display-name
 const ButtonType = React.forwardRef((props: any & React.ButtonHTMLAttributes<HTMLButtonElement>, ref) => {
 	if (props.href) return (
 		// Note: the 'noopener noreferrer' rel prop is valid, but the linter does not recognize the conditional. Added a comment to suppress unnecessary warning.
@@ -21,7 +22,7 @@ const ButtonType = React.forwardRef((props: any & React.ButtonHTMLAttributes<HTM
 		>
 			{props.children}
 		</a>
-	)
+	);
 
 	return (
 		<button
@@ -34,7 +35,7 @@ const ButtonType = React.forwardRef((props: any & React.ButtonHTMLAttributes<HTM
 		>
 			{props.children}
 		</button>
-	)
+	);
 });
 
 function buildButtonClasses(
@@ -42,32 +43,32 @@ function buildButtonClasses(
 	color: 'primary' | 'secondary' | 'white',
 	disabled?: boolean
 ) {
-	let classList: Array<string> = [];
+	const classList: Array<string> = [];
 
 	if (variant === 'filled') {
 		classList.push(classNames(!disabled && 'text-white'), 'focus:border-white active:shadow-inner');
 
 		if (color === 'primary') {
-			classList.push('border-[transparent] bg-primary hover:bg-orange-400 active:bg-orange-400')
+			classList.push('border-[transparent] bg-primary hover:bg-orange-400 active:bg-orange-400');
 		} else if (color === 'secondary') {
-			classList.push('bg-secondary hover:bg-green-500 active:bg-green-500')
-		} else classList.push('bg-white hover:bg-[rgba(255,255,255,0.8)] active:bg-[rgba(255,255,255,0.8)]')
+			classList.push('bg-secondary hover:bg-green-500 active:bg-green-500');
+		} else classList.push('bg-white hover:bg-[rgba(255,255,255,0.8)] active:bg-[rgba(255,255,255,0.8)]');
 	} else if (variant === 'outline') {
 		classList.push('ripple-dark border bg-white');
 
 		if (color === 'primary') {
-			classList.push('text-primary border-primary hover:bg-orange-50 active:shadow-inner-primary')
+			classList.push('text-primary border-primary hover:bg-orange-50 active:shadow-inner-primary');
 		} else if (color === 'secondary') {
-			classList.push('text-secondary border-secondary hover:bg-green-50 active:shadow-inner-secondary')
-		} else classList.push('text-white border-white hover:bg-[rgba(255,255,255,0.15)] active:shadow-inner-secondary')
+			classList.push('text-secondary border-secondary hover:bg-green-50 active:shadow-inner-secondary');
+		} else classList.push('text-white border-white hover:bg-[rgba(255,255,255,0.15)] active:shadow-inner-secondary');
 	} else if (variant === 'flat') {
 		classList.push('ripple-dark bg-transparent border-[transparent]');
 
 		if (color === 'primary') {
-			classList.push('text-primary hover:bg-orange-50 active:shadow-inner-primary')
+			classList.push('text-primary hover:bg-orange-50 active:shadow-inner-primary');
 		} else if (color === 'secondary') {
-			classList.push('text-secondary hover:bg-green-50 active:shadow-inner-secondary')
-		} else classList.push('text-white hover:bg-[rgba(255,255,255,0.15)] active:shadow-inner-secondary')
+			classList.push('text-secondary hover:bg-green-50 active:shadow-inner-secondary');
+		} else classList.push('text-white hover:bg-[rgba(255,255,255,0.15)] active:shadow-inner-secondary');
 	}
 
 	return classList;
@@ -78,11 +79,11 @@ const Button = (props: ButtonProps & React.ButtonHTMLAttributes<HTMLButtonElemen
 	let rightIconObject = <></>;
 	
 	if (props.leftIcon?.iconName) {
-		leftIconObject = <Icon iconName={props.leftIcon.iconName} height={props.href ? '1rem' : props.leftIcon.height} width={props.href ? '1rem' : props.leftIcon.width} className="mr-[10px]" />
+		leftIconObject = <Icon iconName={props.leftIcon.iconName} height={props.href ? '1rem' : props.leftIcon.height} width={props.href ? '1rem' : props.leftIcon.width} className="mr-[10px]" />;
 	}
 	
 	if (props.rightIcon?.iconName) {
-		rightIconObject = <Icon iconName={props.rightIcon.iconName} height={props.href ? '1rem' : props.rightIcon.height} width={props.href ? '1rem' : props.rightIcon.width} className="ml-[10px]" />
+		rightIconObject = <Icon iconName={props.rightIcon.iconName} height={props.href ? '1rem' : props.rightIcon.height} width={props.href ? '1rem' : props.rightIcon.width} className="ml-[10px]" />;
 	}
 
 	return (
@@ -116,7 +117,7 @@ const Button = (props: ButtonProps & React.ButtonHTMLAttributes<HTMLButtonElemen
 					{props.leftIcon?.iconName && (leftIconObject)}
 
 					{props.label && (
-					<span className={classNames(props.labelClass && props.labelClass)}>{props.label}</span>
+						<span className={classNames(props.labelClass && props.labelClass)}>{props.label}</span>
 					)}
 					{props.children && props.children}
 
@@ -125,7 +126,7 @@ const Button = (props: ButtonProps & React.ButtonHTMLAttributes<HTMLButtonElemen
 				
 			</div>	
 		</ButtonType>
-	)
+	);
 };
 
 export default Button;

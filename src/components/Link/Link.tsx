@@ -17,6 +17,7 @@ export interface MoreLinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElem
 	newTab?: boolean;
 }
 
+// eslint-disable-next-line react/display-name
 const Link = React.forwardRef((props: MoreLinkProps, ref) => {
 	return (
 		// Note: the 'noopener noreferrer' rel prop is valid, but the linter does not recognize the conditional. Suppressing unnecessary warning with line below.

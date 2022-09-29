@@ -1,7 +1,7 @@
 import React from 'react';
 
 function App() {
-  return (
+	return (
 		<div className="w-screen h-screen flex items-center bg-gradient-to-r from-white to-[#9233ff]">
 			<div className="mx-auto max-w-sm rounded-md bg-white shadow-2xl p-4">
 				To properly run the Component Library app, open your console and run the following command inside <span className="whitespace-nowrap text-slate-600 font-semibold">/Workspaces/ComponentLibrary</span>:
@@ -9,8 +9,8 @@ function App() {
 					yarn storybook
 				</div>
 			</div>
-    </div>
-  );
+		</div>
+	);
 }
 
 export default App;
