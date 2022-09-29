@@ -13,7 +13,7 @@ This app does not run like most React apps. Instead, this application exports it
 
 To view the Storybook documentation, perform the following steps:
 1. Clone project from Github
-1. 1. Navigate to project's root directory in your terminal (ex: `~username/repos/componentLibrary/`)
+1. Navigate to project's root directory in your terminal (ex: `~username/repos/componentLibrary/`)
 1. Install node_modules dependencies: `npm i` or `yarn install`
 1. Initialize Storybook: `npx storybook init`
 1. Run Storybook: `npm run storybook` or `yarn storybook`
