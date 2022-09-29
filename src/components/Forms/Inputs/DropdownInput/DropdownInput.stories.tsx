@@ -1,4 +1,7 @@
 import React from 'react';
+import { rest } from 'msw';
+import { within, userEvent, findByRole } from '@storybook/testing-library';
+import { expect } from '@storybook/jest';
 import { Story, Meta } from '@storybook/react';
 import DropdownComponent from './DropdownInput';
 
@@ -59,4 +62,36 @@ DropdownInput.args = {
 	multiple: false,
 	error: false,
 	errorMessage: 'Please make a selection.',
+	id: 'storybookDropdown'
+};
+
+
+/**
+ * TESTING
+ */
+DropdownInput.parameters = {
+	msw: {
+		handlers: [
+			rest.get('/tasks', (req, res, ctx) => {
+				return res(ctx.json(DropdownInput.args));
+			}),
+		],
+	},
+};
+
+DropdownInput.parameters = { ...DropdownInput.parameters };
+DropdownInput.play = async ({ canvasElement }) => {
+	const canvas = within(canvasElement);
+	const dropdownInput = await canvas.findByRole('combobox');
+	
+	// Click the dropdown
+	await userEvent.click(dropdownInput);	
+	
+	// Find dropdown <ul>
+	const dropdownList = await canvas.findByRole('listbox');
+
+	const option1 = within(dropdownList).getByText('Option 1');
+
+	await expect(option1).toBeInTheDocument();
+
 };
