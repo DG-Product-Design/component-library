@@ -13,6 +13,7 @@ interface DropdownInputProps {
 	error?: boolean;
 	errorMessage?: string;
 	className?: string;
+	id?: string;
 }
 
 const DropdownInput = (props: DropdownInputProps) => {
@@ -27,7 +28,7 @@ const DropdownInput = (props: DropdownInputProps) => {
 			)}
 			<Listbox value={selected} onChange={props.customChangeFunc ? customOnChangeFunction(props.customChangeFunc) : setSelected} name={props.name} disabled={props.disabled ? props.disabled : false} multiple={props.multiple ? props.multiple : false}>
 				<div className="relative w-full">
-					<Listbox.Button className={({ open }) => `${open ? 'border-blue-300 bg-white' : props.error ? 'bg-red-100 border-red-200' : 'border-slate-300 bg-white'} ${props.className && props.className} ease-in relative w-full flex items-center justify-between cursor-pointer border rounded-[2px] text-base font-base placeholder:text-slate-300 leading-6 text-left focus:shadow-[0_0_5px_0_#0C7BE1] focus:shadow-blue-200 disabled:bg-slate-200 disabled:text-slate-400 disabled:pointer-events-none disabled:outline-0 focus-visible:outline-none py-[10px] px-4`}>
+					<Listbox.Button role='combobox' id={props.id} className={({ open }) => `${open ? 'border-blue-300 bg-white' : props.error ? 'bg-red-100 border-red-200' : 'border-slate-300 bg-white'} ${props.className && props.className} ease-in relative w-full flex items-center justify-between cursor-pointer border rounded-[2px] text-base font-base placeholder:text-slate-300 leading-6 text-left focus:shadow-[0_0_5px_0_#0C7BE1] focus:shadow-blue-200 disabled:bg-slate-200 disabled:text-slate-400 disabled:pointer-events-none disabled:outline-0 focus-visible:outline-none py-[10px] px-4`}>
 						{({ open }) => (
 							<React.Fragment>
 								<span className="block truncate pr-2">{selected}</span>
@@ -46,7 +47,7 @@ const DropdownInput = (props: DropdownInputProps) => {
 						leaveFrom="opacity-100"
 						leaveTo="opacity-0"
 					>
-						<Listbox.Options className="absolute rounded-xl mt-1 max-h-60 w-full overflow-auto bg-white py-1 text-base shadow-base focus:outline-none">
+						<Listbox.Options role='list' className="absolute rounded-xl mt-1 max-h-60 w-full overflow-auto bg-white py-1 text-base shadow-base focus:outline-none">
 							{props.items.map((item, index) => (
 								<Listbox.Option
 									key={`${item}-${index}`}
