@@ -1,6 +1,6 @@
 {
   "name": "@j33p1n/component-library",
-  "version": "0.1.9",
+  "version": "0.1.11",
   "private": false,
   "main": "src/index.ts",
   "main:src": "src/index.ts",
