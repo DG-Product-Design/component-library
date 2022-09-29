@@ -16,7 +16,7 @@ To view the Storybook documentation, perform the following steps:
 1. 1. Navigate to project's root directory in your terminal (ex: `~username/repos/componentLibrary/`)
 1. Install node_modules dependencies: `npm i` or `yarn install`
 1. Initialize Storybook: `npx storybook init`
-1. Run Storybook: `npm run storybook`
+1. Run Storybook: `npm run storybook` or `yarn storybook`
 
 ## Testing components
 Storybook comes with it's own instrumented testing library built on Jest. This enables us to write tests which perform directly in the browser rather than strictly on the command-line. 
