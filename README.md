@@ -26,3 +26,11 @@ To view a functional test for the Dropdown Input component:
 1. Navigate to the `Dropdown Input` component (Forms > Inputs > Dropdown Input)
 1. Make sure the 'Canvas' tab is selected in the top-left of the preview pane
 1. Notice the controls that are now present on the screen. Find the right-most tab called 'Interactions' and select it. Here you will see a breakdown of the tests and a pass/fail readout, along with an error console when errors are present.
+
+## Screenshots
+![Colors Stoybook documentation, screenshot 1](https://davidageorge.me/img/colors-preview.png)
+![Colors Stoybook documentation, screenshot 2](https://davidageorge.me/img/colors-preview-2.png)
+![Buttons Stoybook documentation](https://davidageorge.me/img/buttons-preview.png)
+![Dropdown Stoybook documentation](https://davidageorge.me/img/dropdown-preview.png)
+![Icons Stoybook documentation](https://davidageorge.me/img/icons-preview.png)
+![Text Stoybook documentation](https://davidageorge.me/img/text-preview.png)
